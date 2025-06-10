@@ -1,0 +1,945 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff; /* Vibrant blue */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative; /* For logo positioning */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #343a40; /* Dark gray nav */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    display: flex; /* Make navigation items flex for alignment */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 5px 10px; /* Adjusted margin for wrapping */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.1)), url('https://cdni.iconscout.com/illustration/premium/thumb/business-growth-with-business-team-2706803-2264300.png') no-repeat center center/cover;
+    color: #343a40;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex; /* Use flex for centering content */
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Ensure hero section takes at least 70% of viewport height */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #28a745; /* Success green */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for subtle animation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Lift button slightly on hover */
+}
+
+/* Services Section Styles */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax for better mobile fit */
+    gap: 30px; /* Reduced gap slightly */
+    padding: 0 30px; /* Padding for the grid itself */
+    max-width: 1200px; /* Max width to keep content contained */
+    margin: 0 auto; /* Center the grid */
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centered text within cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.service-card img {
+    max-width: 80px; /* Slightly larger icons */
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.6em; /* Slightly smaller for better fit */
+    margin-bottom: 10px;
+    color: #28a745;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #6c757d;
+    line-height: 1.7;
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e9ecef; /* Light gray */
+}
+
+.portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax for better mobile fit */
+    gap: 30px; /* Reduced gap slightly */
+    padding: 0 30px; /* Padding for the grid itself */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.03); /* More noticeable zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    height: 220px; /* Fixed height for consistent cards */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.portfolio-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-details h4 {
+    font-size: 1.4em; /* Slightly smaller for better fit */
+    margin-bottom: 10px;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.portfolio-details p {
+    color: #6c757d;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; /* Space between items */
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    font-size: 1.1em;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+.contact-info img {
+    width: 28px; /* Slightly larger icons */
+    height: 28px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #495057; /* Slightly lighter dark gray */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative; /* For error message positioning */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da; /* Added border */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #e9ecef; /* Light gray input background */
+    color: #343a40;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-btn {
+    background-color: #28a745; /* Success green */
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.contact-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position below the input */
+    width: 100%;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    border-top: 1px solid #555;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: none; /* Hidden by default */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+
+/* === Responsive Adjustments (Mobile-First Approach) === */
+
+/* Tablets (>= 768px) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3.5em;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+
+    .contact-info {
+        flex-direction: row; /* Display side-by-side on tablets */
+    }
+}
+
+/* Laptops/Desktops (>= 1024px) */
+@media (min-width: 1024px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    .logo {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        padding: 15px 30px;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero-content {
+        padding: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 4em;
+    }
+
+    .hero-content p {
+        font-size: 1.4em;
+    }
+
+    .services h2,
+    .portfolio h2,
+    .contact h2 {
+        font-size: 3em;
+    }
+
+    .service-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust for larger screens */
+        gap: 40px;
+    }
+
+    .contact p {
+        font-size: 1.3em;
+    }
+}
+/* WhatsApp Chat Button Styles */
+.whatsapp-chat-option {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-chat-option p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366; /* WhatsApp Green */
+}
+
+.whatsapp-btn:hover {
+    background-color: #1DA851; /* Darker green on hover */
+}
+/* --- FlourishFly Chatbot Button (Message-like) --- */
+.flourishfly-chatbot-button {
+    /* These three properties make the button float and stay in place */
+    position: fixed; /* Keeps the button visible even when scrolling */
+    bottom: 25px;    /* Positions it 25 pixels from the bottom of the screen */
+    right: 25px;     /* Positions it 25 pixels from the right of the screen */
+
+    background-color: #007bff; /* Your FlourishFly primary blue! */
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px 12px 20px;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;   /* Ensures it sits above all other page content */
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Hover state for interaction */
+.flourishfly-chatbot-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Active (click) state */
+.flourishfly-chatbot-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the SVG icon inside the button */
+.flourishfly-chatbot-button .flourishfly-chatbot-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .flourishfly-chatbot-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 20px 10px 15px;
+        min-width: unset;
+        width: auto;
+        font-size: 1em;
+    }
+    .flourishfly-chatbot-button .flourishfly-chatbot-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+/* --- Main Chatbot Container (visible when .is-visible is added by JS) --- */
+#your-actual-chatbot-ui-container-id {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 100px; /* Adjust to float above your "Chatbot" button */
+    right: 25px;
+    width: 380px; /* Slightly wider for better readability */
+    height: 520px; /* Adjusted height */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* Stronger shadow */
+    overflow: hidden; /* Ensures content inside stays within bounds */
+    flex-direction: column; /* For proper flex layout of header, messages, input */
+    z-index: 999; /* Just below the floating button (z-index: 1000) */
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px); /* For slide-up animation */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* State when the chatbot is visible (toggled by JavaScript) */
+#your-actual-chatbot-ui-container-id.is-visible {
+    display: flex; /* Show the chatbot container */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up to its final position */
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #5b9bf1; /* FlourishFly primary blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+/* Chat Messages Area */
+.chatbot-messages {
+    flex-grow: 1; /* Allows it to take up available space */
+    padding: 15px;
+    overflow-y: auto; /* Enable scrolling for messages */
+    background-color: #fbfdff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message Styles */
+.message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+    color: #333;
+    border-bottom-left-radius: 4px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #d1e7ff;
+    color: #333;
+    border-bottom-right-radius: 4px;
+}
+
+/* Thinking indicator */
+.bot-message.thinking {
+    background-color: #f0f0f0;
+    font-style: italic;
+    color: #666;
+}
+.bot-message.error {
+    background-color: #ffe0e0; /* Light red for error */
+    color: #c00;
+}
+
+
+/* Quick Replies */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+    align-self: flex-start;
+    background: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+.quick-reply-btn {
+    background-color: #a7d9f7;
+    color: #333;
+    border: 1px solid #82c7ed;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quick-reply-btn:hover {
+    background-color: #82c7ed;
+    transform: translateY(-1px);
+}
+
+/* Input Area */
+.chatbot-input-area {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.chatbot-input-area input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.chatbot-input-area input:focus {
+    border-color: #5b9bf1;
+}
+
+.chatbot-input-area button {
+    background-color: #5b9bf1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input-area button:hover:not(:disabled) {
+    background-color: #4a8ad0;
+}
+
+.chatbot-input-area button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Scrollbar styles for messages */
+.chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 10px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: #909090;
+}
+
+/* Close button inside chatbot header */
+#chatbot-internal-close-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+#chatbot-internal-close-button:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments for chatbot container */
+@media (max-width: 600px) {
+    #your-actual-chatbot-ui-container-id {
+        width: 90vw; /* Take up more width on small screens */
+        height: 80vh; /* Take up more height */
+        bottom: 80px; /* Adjust positioning */
+        right: 5vw; /* Adjust positioning */
+        left: 5vw;
+        max-width: 400px; /* Limit max width */
+        max-height: 600px; /* Limit max height */
+    }
+}
+/* --- */
+/* FAQ Section Styles */
+.faq-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Light background */
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.faq-section h3 {
+    font-size: 2.2em;
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align questions/answers to the left */
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflow when answer collapses */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    cursor: pointer;
+    background-color: #ffffff;
+    font-size: 1.15em;
+    color: #343a40;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 1em; /* Adjust to fit the line-height of parent */
+}
+
+.faq-icon {
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    color: #007bff;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Rotate '+' to 'x' when active */
+}
+
+.faq-answer {
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Smooth transition */
+    padding: 0 25px; /* No padding when collapsed */
+    background-color: #fcfcfc;
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed, should be taller than longest answer */
+    padding: 15px 25px;
+}
+
+.faq-answer p {
+    font-size: 0.95em;
+    color: #495057;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustments for FAQ */
+@media (max-width: 600px) {
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+    .faq-answer {
+        padding: 0 20px;
+    }
+    .faq-item.active .faq-answer {
+        padding: 10px 20px;
+    }
+}
+/* --- */
+/* NEW: Pricing Toggle Area Styles */
+.pricing-toggle-area {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    padding: 20px 30px;
+    margin: 50px auto; /* Center it */
+    max-width: 600px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pricing-toggle-area:hover {
+    background-color: #0056b3; /* Darker on hover */
+    transform: translateY(-3px);
+}
+
+.pricing-toggle-area .click-to-reveal {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0; /* Remove default paragraph margin */
+}
+
+.pricing-toggle-area .toggle-icon {
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+}
+
+.pricing-toggle-area.active .toggle-icon {
+    transform: rotate(180deg); /* Rotate icon when active */
+}
+
+/* NEW: Collapsible Pricing Content Styles */
+.collapsible-pricing-content {
+    max-height: 0; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    overflow: hidden;
+    transition: max-height 0.8s ease-out, opacity 0.8s ease; /* Smooth transition */
+}
+
+.collapsible-pricing-content.active {
+    max-height: 5000px; /* Needs to be larger than max possible height of content */
+    opacity: 1;
+}
+
+/* Ensure existing pricing-section padding accounts for the trigger */
+.pricing-section {
+    padding: 80px 20px; /* Keep this as is for overall section padding */
+    /* ... rest of your existing pricing-section styles ... */
+}
+
+/* Adjust margins for internal elements if needed after wrapping */
+.pricing-container, .add-ons-section, .faq-section {
+    margin-top: 40px; /* Add some space above these once revealed */
+}
+
+/* Adjust existing pricing section top padding to accommodate the new toggle button */
+/* No specific change needed for .pricing-section, as padding will contain the toggle area too */
+
+/* Media queries for pricing-toggle-area on smaller screens */
+@media (max-width: 600px) {
+    .pricing-toggle-area {
+        padding: 15px 20px;
+        flex-direction: column; /* Stack text and icon */
+        gap: 5px;
+    }
+    .pricing-toggle-area .click-to-reveal {
+        font-size: 1.1em;
+    }
+}
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #007bff; /* Adds a vibrant bottom border on hover */
+}
+/* Styling for the AI typing indicator */
+.typing-indicator {
+    font-style: italic;
+    color: #6c757d;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+/* Extra Large Screens (>= 1440px) */
+@media (min-width: 1440px) {
+    .service-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}

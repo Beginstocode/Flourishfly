@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlourishFly - Helping Small Businesses Soar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text */
+            line-height: 1.6;
+        }
+          
+
+        /* Header Styles */
+        header {
+            background-color: #007bff; /* Vibrant blue */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative; /* For logo positioning */
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #343a40; /* Dark gray nav */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background: linear-gradient(rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.1)), url('https://cdni.iconscout.com/illustration/premium/thumb/business-growth-with-business-team-2706803-2264300.png'); /* Example image - replace with your own */
+            background-size: cover;
+            background-position: center;
+            color: #343a40;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .hero-content p {
+            font-size: 1.3em;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745; /* Success green */
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        /* Services Section Styles */
+        .services {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            padding: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #6c757d;
+            line-height: 1.7;
+        }
+
+        .service-card img {
+            max-width: 60px;
+            margin-bottom: 15px;
+        }
+
+        /* Portfolio Section Styles */
+        .portfolio {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #e9ecef; /* Light gray */
+        }
+
+        .portfolio h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .portfolio-item {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .portfolio-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-details h4 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #343a40;
+            font-weight: 600;
+        }
+
+        .portfolio-details p {
+            color: #6c757d;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background-color: #343a40; /* Dark gray */
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            opacity: 1;
+        }
+
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #495057; /* Slightly lighter dark gray */
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #f8f9fa;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+            background-color: #ced4da; /* Light gray input background */
+            color: #343a40;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .contact-btn {
+            background-color: #28a745; /* Success green */
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .contact-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40; /* Dark gray */
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9em;
+            border-top: 1px solid #555;
+        }
+
+        /* Pricing Section Styles */
+        .pricing-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .pricing-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .pricing-section .section-tagline {
+            font-size: 1.2em;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .pricing-toggle-area {
+            cursor: pointer;
+            padding: 15px 25px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pricing-toggle-area:hover {
+            background-color: #dee2e6;
+        }
+
+        .pricing-toggle-area .click-to-reveal {
+            margin: 0;
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .pricing-toggle-area .toggle-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-pricing-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-out;
+        }
+
+        .collapsible-pricing-content.active {
+            max-height: 2000px; /* Adjust as needed to fit content */
+            transition: max-height 0.7s ease-in;
+        }
+
+        .pricing-toggle-area.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .pricing-card {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pricing-card.featured {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 123, 255, 0.3);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.featured .plan-header h3,
+        .pricing-card.featured .price {
+            color: white;
+        }
+
+        .pricing-card.featured .plan-tagline,
+        .pricing-card.featured .price-duration,
+        .pricing-card.featured .features-list li,
+        .pricing-card.featured .add-on-list p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .plan-header {
+            margin-bottom: 25px;
+        }
+
+        .plan-title {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .pricing-card.featured .plan-title {
+            color: white;
+        }
+
+        .plan-tagline {
+            font-size: 1em;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 3em;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 5px;
+        }
+
+        .price-duration {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .most-popular {
+            background-color: #ffc107;
+            color: #343a40;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #e2e6ea;
+            color: #495057;
+            font-size: 1.05em;
+        }
+
+        .pricing-card.featured .features-list li {
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .excluded-feature {
+            color: #dc3545 !important;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .plan-cta {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .starter-cta {
+            background-color: #007bff;
+        }
+
+        .starter-cta:hover {
+            background-color: #0056b3;
+        }
+
+        .growth-cta {
+            background-color: #28a745; /* Green for popular */
+        }
+
+        .growth-cta:hover {
+            background-color: #218838;
+        }
+
+        .flourish-pro .plan-cta {
+            background-color: #6f42c1; /* Purple */
+        }
+
+        .flourish-pro .plan-cta:hover {
+            background-color: #5a2c99;
+        }
+
+        .add-ons-section {
+            background-color: #e9ecef;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .add-ons-section h3 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .add-on-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .add-on-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+
+        .add-on-item h4 {
+            font-size: 1.4em;
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .add-on-item p {
+            color: #6c757d;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .add-on-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* WhatsApp Chat Option */
+        .whatsapp-chat-option {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #e6ffed; /* Light green background */
+            border-top: 1px solid #d4edda;
+            border-bottom: 1px solid #d4edda;
+            margin-top: 40px;
+        }
+
+        .whatsapp-chat-option p {
+            font-size: 1.1em;
+            color: #218838;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366; /* WhatsApp green */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+        }
+
+        /* FAQ Section Styles */
+        .faq-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .faq-section h3 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-item {
+            background-color: white;
+            border: 1px solid #e2e6ea;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            cursor: pointer;
+            background-color: #f1f3f5;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #e9ecef;
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #343a40;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            font-size: 1.8em;
+            color: #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+            background-color: white;
+            padding: 0 25px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust based on content */
+            padding: 20px 25px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        /* New styles for Payment Section */
+        .payment-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f0f8ff; /* Light blue background */
+            border-top: 1px solid #d0e8ff;
+        }
+
+        .payment-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .payment-section p {
+            font-size: 1.1em;
+            color: #495057;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qr-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: inline-block; /* To shrink background to content */
+            margin-bottom: 25px;
+            max-width: 300px; /* Limit QR container width */
+            width: 90%; /* Responsive width */
+        }
+
+        .qr-container img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin: 0 auto 15px auto; /* Center image */
+        }
+
+        .qr-container p {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        .upi-id-display {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .payment-app-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .payment-app-buttons a {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease-in-out;
+            min-width: 150px;
+            justify-content: center;
+        }
+
+        .payment-app-buttons a:hover {
+            transform: translateY(-2px);
+        }
+
+        .payment-app-buttons img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .gpay-btn {
+            background-color: #4285F4; /* Google Pay blue */
+        }
+        .gpay-btn:hover { background-color: #357ae8; }
+
+        .phonepe-btn {
+            background-color: #6739B7; /* PhonePe purple */
+        }
+        .phonepe-btn:hover { background-color: #5a2ea1; }
+
+        .paytm-btn {
+            background-color: #00B9F1; /* Paytm light blue */
+        }
+        .paytm-btn:hover { background-color: #00a0d4; }
+
+        /* Responsive adjustments for payment section */
+        @media (max-width: 768px) {
+            .payment-app-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .payment-app-buttons a {
+                width: 80%; /* Make buttons wider on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FlourishFly</div>
+        <h1>Empowering Small Businesses to Soar</h1>
+        <p>Your Partner in Website Development and Strategic Marketing</p>
+    </header>
+
+    <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Grow Your Business with a Stunning Online Presence</h1>
+            <p>FlourishFly helps small businesses like yours establish a powerful online presence through expertly crafted websites and effective marketing strategies.</p>
+            <a href="#contact" class="btn">Let's Discuss Your Growth</a>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <h2>🚀 FlourishFly Pricing Plans</h2>
+        <p class="section-tagline">Designed for small businesses to soar online</p>
+
+        <div class="pricing-toggle-area" id="pricingToggleArea">
+            <p class="click-to-reveal">Click here to see all our plans & details</p>
+            <span class="toggle-icon">▼</span>
+        </div>
+
+        <div class="collapsible-pricing-content" id="collapsiblePricingContent">
+
+            <div class="pricing-container">
+                <div class="pricing-card starter">
+                    <div class="plan-header">
+                        <h3 class="plan-title">Starter</h3>
+                        <p class="plan-tagline">Perfect for small local businesses just getting started</p>
+                        <div class="price">₹4,999</div>
+                        <p class="price-duration">One-Time Payment</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✅ 1-Page Static Website (Mobile-Friendly)</li>
+                        <li>✅ Integrated Contact Form & WhatsApp Button</li>
+                        <li>✅ Essential SEO Setup (Google index ready)</li>
+                        <li>✅ **Fast Delivery:** 3 Days</li>
+                        <li class="excluded-feature">🚫 No Marketing Services Included</li>
+                    </ul>
+                    <a href="#contact" class="btn plan-cta starter-cta">Get Started</a>
+                </div>
+
+                <div class="pricing-card growth featured">
+                    <div class="plan-header">
+                        <h3 class="plan-title">Growth</h3>
+                        <p class="plan-tagline">Best for startups looking to establish their brand online</p>
+                        <div class="price">₹11,999</div>
+                        <p class="price-duration">One-Time Payment</p>
+                        <span class="most-popular">🌟 Most Popular!</span>
+                    </div>
+                    <ul class="features-list">
+                        <li>✅ **Comprehensive 5-Page Website** (Home, About, Services, Contact, Blog)</li>
+                        <li>✅ Custom & Responsive Design</li>
+                        <li>✅ Basic Brand Identity (Fonts, Colors, Logo Integration)</li>
+                        <li>✅ **Optimized On-Page SEO**</li>
+                        <li>✅ Google My Business Setup & Optimization</li>
+                        <li>✅ **1-Month Marketing Strategy Plan**</li>
+                        <li>🎯 Ideal for growing your online presence</li>
+                        <li>📦 Delivery: 5–7 Days</li>
+                    </ul>
+                    <a href="#contact" class="btn plan-cta growth-cta">Choose Growth</a>
+                </div>
+
+                <div class="pricing-card flourish-pro">
+                    <div class="plan-header">
+                        <h3 class="plan-title">Flourish Pro</h3>
+                        <p class="plan-tagline">All-in-one solution to grow, brand, and convert customers</p>
+                        <div class="price">₹24,999</div>
+                        <p class="price-duration">One-Time Payment</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>✅ **Premium 5–7 Page Custom Website**</li>
+                        <li>✅ Dedicated Landing Page + CTA Optimization</li>
+                        <li>✅ **Complete Brand Identity Kit** (Logo, Color Palette, Font Guide)</li>
+                        <li>✅ **1-Month Social Media Marketing Plan**</li>
+                        <li>✅ 6 Custom Social Media Posts + Captions</li>
+                        <li>✅ Instagram & Facebook Business Page Setup</li>
+                        <li>✅ **3-Month Advanced SEO Plan** (with recommended tools & strategy)</li>
+                        <li>✅ **WhatsApp Chat Integration (Live Chat)**</li>
+                        <li>🚀 Free 30-min Consultation Call</li>
+                        <li>📦 Delivery: 7–10 Days</li>
+                    </ul>
+                    <a href="#contact" class="btn plan-cta pro-cta">Go Pro!</a>
+                </div>
+                </div>
+
+            <div class="add-ons-section">
+                <h3>📌 Optional Add-Ons</h3>
+                <div class="add-on-list">
+                    <div class="add-on-item">
+                        <h4>Ecommerce Add-On (Shop/Cart)</h4>
+                        <p>Seamlessly integrate an online store for your products.</p>
+                        <span class="add-on-price">₹3,000</span>
+                    </div>
+                    <div class="add-on-item">
+                        <h4>Extra Social Media Posts</h4>
+                        <p>Expand your reach with more engaging social content.</p>
+                        <span class="add-on-price">₹1,000 / 5 posts</span>
+                    </div>
+                    <div class="add-on-item">
+                        <h4>Blog Writing (SEO optimized)</h4>
+                        <p>High-quality, search-friendly content to attract visitors.</p>
+                        <span class="add-on-price">₹500 / blog</span>
+                    </div>
+                    <div class="add-on-item">
+                        <h4>Professional Logo Design</h4>
+                        <p>A unique and memorable logo that defines your brand.</p>
+                        <span class="add-on-price">₹1,499</span>
+                    </div>
+                </div>
+            </div>
+              
+</div>
+    <section id="services" class="services">
+        <h2>Our Growth-Focused Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://cdn.dribbble.com/users/2659777/screenshots/9656885/group_116.png" alt="Website Design">
+                <h3>Website Design & Development</h3>
+                <p>We design and build user-friendly, responsive websites that not only look great but also drive results for your business.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://images.klipfolio.com/website/public/297f7872-b3dc-4c28-85c7-e42f1bcce16a/seo-analytics-dashboard.png" alt="SEO">
+                <h3>Search Engine Optimization (SEO)</h3>
+                <p>Improve your website's visibility on search engines and attract more organic traffic with our tailored SEO solutions.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://img.freepik.com/premium-vector/black-white-social-media-icons-set-logo-vector-illustrator_243129-579.jpg?w=1060" alt="Social Media Marketing">
+                <h3>Social Media Marketing</h3>
+                <p>Engage your target audience and build a strong brand presence on social media platforms.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://www.adlibweb.com/wp-content/uploads/2023/05/image1-1.jpg" alt="Content Marketing">
+                <h3>Compelling Content Creation</h3>
+                <p>We create valuable and engaging content that attracts, informs, and converts your ideal customers.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.MmWc2gXACRtRt2f2dKlF9QHaF0&pid=Api&P=0&h=180" alt="Email Marketing">
+                <h3>Strategic Email Marketing</h3>
+                <p>Nurture leads and foster customer loyalty with effective and targeted email campaigns.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.RGnYpf6IgYTleuwAY3jskgHaEz&pid=Api&P=0&h=180" alt="Branding">
+                <h3>Branding & Visual Identity</h3>
+                <p>We help you establish a strong and memorable brand identity that resonates with your target market.</p>
+            </div>
+        </div>
+    </section>
+    <div class="whatsapp-chat-option">
+    <p>Prefer to chat? Connect with us on WhatsApp directly!</p>
+    <a href="https://wa.me/919369633951?text=Hi there, I'm looking into digital solutions for my business. What kind of results do you help clients achieve?
+
+." 
+        target="_blank" class="btn whatsapp-btn">
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp Icon" style="vertical-align: middle; margin-right: 8px; width: 24px; height: 24px;"> Chat on WhatsApp
+    </a>
+    
+</div>
+    <section id="portfolio" class="portfolio">
+        <h2>Our Recent Success Stories</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/8_bakery-website-templates.jpg" alt="Website Project 1">
+                <div class="portfolio-details">
+                    <h4>Local Bakery Website</h4>
+                    <p>Modern design, online ordering system.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://thecrmfirm.com/wp-content/uploads/2023/11/iStock-1472242645.jpg" alt="Marketing Campaign 1">
+                <div class="portfolio-details">
+                    <h4>Social Media Growth Strategy</h4>
+                    <p>Increased engagement and lead generation.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://s3-alpha.figma.com/hub/file/3677930348/e3421eb5-3604-412d-8fff-96a0d304880e-cover.png" alt="E-commerce Site Redesign">
+                <div class="portfolio-details">
+                    <h4>Online Store Redesign</h4>
+                    <p>Improved user experience and sales conversion.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+<section id="contact" class="contact">
+        <h2>Ready to Elevate Your Business?</h2>
+        <p>Get in touch with FlourishFly today for a free consultation and discover how we can help your small business thrive online.</p>
+        <div class="contact-info">
+            <a href="mailto:singhsatyam22050@gmail.com"><img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Email Icon"> singhsatyam22050@gmail.com</a>
+            <a href="tel:9369633951"><img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon"> +91 9369633951
+            </a>
+            </div>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required aria-label="Your Name">
+                <div class="error-message" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required aria-label="Your Email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" required aria-label="Your Message"></textarea>
+                <div class="error-message" id="messageError"></div>
+            </div>
+            
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+    </section>
+    <div class="whatsapp-chat-option">
+    <p>Prefer to chat? Connect with us on WhatsApp directly!</p>
+    <a href="https://wa.me/919369633951?text=Hi there, I'm looking into digital solutions for my business. What kind of results do you help clients achieve?
+
+." 
+        target="_blank" class="btn whatsapp-btn">
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp Icon" style="vertical-align: middle; margin-right: 8px; width: 24px; height: 24px;"> Chat on WhatsApp
+    </a>
+    
+</div>
+ <div class="faq-section">
+        <h3>💡 Frequently Asked Questions</h3>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is a static website?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A static website is one that delivers pre-built content to the user's web browser. It's generally faster, more secure, and less complex to host, making it perfect for businesses that primarily need an online brochure or information hub.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How long does it take to build a website?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our delivery times vary by plan: Starter (3 Days), Growth (5-7 Days), and Flourish Pro (7-10 Days). These times are from when we have all necessary content from you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you provide website hosting?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our pricing plans primarily cover design and development. We can guide you on reliable and affordable hosting providers, and even help with initial setup, but hosting costs are separate.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is SEO and why do I need it?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>SEO (Search Engine Optimization) helps your website rank higher on Google and other search engines. This means more potential customers find your business organically, increasing traffic and leads without paid ads.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Can I upgrade my plan later?</h4>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, absolutely! We understand businesses grow. You can upgrade from Starter to Growth or Growth to Flourish Pro at any time. We'll adjust the pricing based on the difference between the plans.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 FlourishFly. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
